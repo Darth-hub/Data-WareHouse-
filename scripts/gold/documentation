@@ -1,1 +1,22 @@
+🌟 Gold Layer: Business-Ready Data (Aggregated, Analytical)
+The Gold Layer is where raw and semi-cleaned data is:
 
+✅ Combined across sources (CRM + ERP)
+✅ Enriched with business logic
+✅ Aggregated into final Fact and Dimension tables
+✅ Made ready for dashboards, reporting, and data analytics
+
+| Step                                  | Description                                                                       | Output                          |
+| ------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------- |
+| **1. Join Silver Tables**             | Combine `erp_sales`, `erp_products`, `erp_customers`, and optionally `crm` tables | Single, meaningful datasets     |
+| **2. Create Dimensions**              | Extract info like `customer_name`, `location`, `category`, `product_name`         | `dim_customers`, `dim_products` |
+| **3. Create Fact Tables**             | Summarize metrics like total sales, units sold, etc.                              | `fact_sales`                    |
+| **4. Add Date Dimensions (optional)** | Useful for time-based analytics                                                   | `dim_date`                      |
+| **5. Business KPIs**                  | Revenue by product, monthly growth, top customers                                 | `summary_sales`, `top_products` |
+
+| Table Name           | Description                                            |
+| -------------------- | ------------------------------------------------------ |
+| `dim_customers`      | Customer ID, Name, Gender, CRM Score (if applicable)   |
+| `dim_products`       | Product ID, Category, Price                            |
+| `fact_sales`         | Sale ID, Product ID, Customer ID, Date, Units, Revenue |
+| `gold_sales_summary` | Aggregated sales by category or month                  |
