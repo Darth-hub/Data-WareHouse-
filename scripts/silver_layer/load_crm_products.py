@@ -16,7 +16,6 @@ df = df.dropna(subset=["prd_id", "prd_key"])
 df['prd_start_dt'] = pd.to_datetime(df['prd_start_dt'], errors='coerce')
 df['prd_end_dt'] = pd.to_datetime(df['prd_end_dt'], errors='coerce')
 
-# ✅ Convert to MySQL-compatible string format
 df['prd_start_dt'] = df['prd_start_dt'].dt.strftime('%Y-%m-%d %H:%M:%S')
 df['prd_end_dt'] = df['prd_end_dt'].dt.strftime('%Y-%m-%d %H:%M:%S')
 
